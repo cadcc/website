@@ -25,21 +25,6 @@
 					</div>
 				</div>
 
-				<div class="col3 right">
-					<div class="col3_content">
-
-						<div class="col_title">Resources</div>
-						<ul>
-							<li><a href="http://templates.arcsin.se/">Arcsin Web Templates</a> - Free Templates</li>
-							<li><a href="http://www.google.com/">Google</a> - Web Search</li>
-							<li><a href="http://www.w3schools.com/">W3Schools</a> - Online Web Tutorials</li>
-							<li><a href="http://www.wordpress.org/">WordPress</a> - Blog Platform</li>
-							<li><a href="http://cakephp.org/">CakePHP</a> - PHP Framework</li>
-						</ul>
-
-					</div>
-				</div>
-
 				<div class="clearer">&nbsp;</div>
 
 			</div>

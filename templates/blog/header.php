@@ -37,15 +37,23 @@
 			<div id="nav1">
 
 				<ul>
-					<li<?php if ( is_home() ) : ?> class="current_page_item"<?php endif; ?>><a href="<?php echo get_option('home'); ?>">Home</a></li>
-					<?php wp_list_pages('title_li=&depth=1'); ?>
+					<li><a href="http://cadcc.cl/">CaDCC</a></li>
+					<li class="current_page_item"><a href="<?php echo get_option('home'); ?>">Blog</a></li>
 				</ul>
 
 				<div class="clearer">&nbsp;</div>
 
 			</div>
+			
+			<div id="nav2">
+				<ul>
+					<li<?php if ( is_home() ) : ?> class="current_page_item"<?php endif; ?>><a href="<?php echo get_option('home'); ?>">Posts</a></li>
+					<?php wp_list_pages('title_li=&depth=1'); ?>
+				</ul>
 
-			<?php the_subpages(); ?>
+				<div class="clearer">&nbsp;</div>
+			</div>
+
 
 		</div>
 
