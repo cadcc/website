@@ -7,6 +7,9 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
 	<link rel="stylesheet" type="text/css" href="cadcc.css" media="screen" />
+	<script src="scripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/jquery.jfeed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/home.js" type="text/javascript" charset="utf-8"></script>
 	<title>Home @ CaDCC</title>
 </head>
 
@@ -18,7 +21,7 @@
 	<div id="layout_top">
 		
 		<div id="site_title">
-			<h1><a href="http://www.cadcc.cl/"><img src="images/cadcc.png" /></a></h1>
+			<h1><a href="http://cadcc.cl/"><img src="images/cadcc.png" /></a></h1>
 			<h2>Centro de Alumnos del Departamento de Ciencias de la Computación</h2>
 		</div>
 
@@ -30,33 +33,21 @@
 		<div id="navigation">
 
 			<div id="nav1">
-
 				<ul>
-					<li class="current_page_item"><a href="http://www.cadcc.cl/">CaDCC</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Wiki</a></li>
-					<!-- <li><a href="http://www.cadcc.cl/servicios">Servicios</a></li> -->
-					
-					<!-- 
-					<li><a href="archives.html">Archives</a></li>
-					<li><a href="empty_page.html">Empty Page</a></li>
-					-->
+					<li class="current_page_item"><a href="http://cadcc.cl/">CaDCC</a></li>
+					<li><a href="http://blog.cadcc.cl/">Blog</a></li>
 				</ul>
 
 				<div class="clearer">&nbsp;</div>
-
 			</div>
 
 			<div id="nav2">
-
 				<ul>
-					<li class="current_page_item"><a href="#">Home</a></li>
-					<li><a href="empty_page.html">Planet</a></li>
-					<li><a href="empty_page.html">Calendario</a></li>
+					<li class="current_page_item"><a href="http://cadcc.cl/">Home</a></li>
+					<li><a href="http://blog.cadcc.cl/">Comunidad</a></li>
 				</ul>
 
 				<div class="clearer">&nbsp;</div>
-
 			</div>
 
 		</div>
@@ -71,62 +62,25 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					
 					<div class="box">
-						<div class="box_title">Última Noticia</div>
-						<div class="box_content">
-							<div class="post">
-
-								<div class="post_title"><h1>Porttitor posuere</h1></div>
-								<div class="post_date">Posted on Dec 11th at 16:12 by <a href="#">Aliquet Quis</a></div>
-
-								<div class="post_body">
-
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sagittis. Proin ac felis. Consectetuer adipiscing elit. Pellentesque enim dui, rhoncus ut, pharetra</p>
-
-									<ul>
-										<li>List item 1</li>
-										<li>List item 2</li>				
-										<li>List item 3</li>
-									</ul>	
-
-								</div>
-
-								<div class="post_meta">
-									Tagged: <a href="#">Purus</a>, <a href="#">Semper</a>, <a href="#">Vestibulum</a>
-								</div>
-
-							</div>
-						
+						<div class="box_title">Noticias</div>
+						<div class="box_content" id="news">
 						</div>
+						<p>Lee mas en <a href="http://blog.cadcc.cl/" alt="Blog del CaDCC">nuestro blog &#x2192;</a></p>
 					</div>
 					
 					<div class="box" style="width: 330px; float: left;">
 						<div class="box_title">Tweets</div>
-						<div class="box_content">
-						<p><a href="#" class="thumb" ><img src="sample-thumbnail.jpg" width="30" height="30" alt="" /></a> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sagittis. Proin ac felis. Consectetuer adipiscing elit. Pellentesque enim dui, rhoncus ut, pharetra</p>
-						<p><a href="#" class="thumb" ><img src="sample-thumbnail.jpg" width="30" height="30" alt="" /></a> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sagittis. Proin ac felis. Consectetuer adipiscing elit. Pellentesque enim dui, rhoncus ut, pharetra</p>
-						<p><a href="#" class="thumb" ><img src="sample-thumbnail.jpg" width="30" height="30" alt="" /></a> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc sagittis. Proin ac felis. Consectetuer adipiscing elit. Pellentesque enim dui, rhoncus ut, pharetra</p>
+						<div class="box_content" id="tweets">
 						</div>
+						<p>Mas en <a href="http://twitter.com/cadcc" alt="Twitter CaDCC">@cadcc</a></p>
 					</div>
+					
 					<div class="box" style="width: 230px; float: right;">
-						<div class="box_title">Fotos</div>
+						<div class="box_title">Facebook</div>
 						<div class="box_content">
-							<div class="thumbnails">
-								
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-
-								<div class="clearer">&nbsp;</div>
-
-							</div>
-						
+							<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/es_LA"></script><script type="text/javascript">FB.init("995e9ccd01aab03a2881739961f82c9c");</script><fb:fan profile_id="172871116581" stream="" connections="20" width="230"></fb:fan>
 						</div>
+						<a href="http://www.facebook.com/pages/CaDCC/172871116581">CaDCC en Facebook</a>
 					</div>
 										
 				</div>
@@ -140,7 +94,7 @@
 						<div class="box_title">Acerca de</div>
 
 						<div class="box_content">
-							<p>Aenean sit amet dui at felis lobortis dignissim. Pellentesque risus nibh, feugiat in, convallis id, congue ac, sem. Sed tempor neque in quam.</p>
+							<p>El CaDCC es...</p>
 						</div>
 
 					</div>
@@ -151,35 +105,10 @@
 
 						<div class="box_content">
 							<ul>
-								<li><a href="http://templates.arcsin.se/">Arcsin Web Templates</a></li>
-								<li><a href="http://www.google.com/">Google</a> - Web Search</li>
-								<li><a href="http://www.w3schools.com/">W3Schools</a> - Online Web Tutorials</li>
-								<li><a href="http://www.wordpress.org/">WordPress</a> - Blog Platform</li>
-								<li><a href="http://cakephp.org/">CakePHP</a> - PHP Framework</li>
+								<li><a href="http://www.dcc.uchile.cl/">Departamento de Ciencias de la Computación</a></li>
+								<li><a href="http://ingenieria.uchile.cl/">Facultad de Ciencias Físicas y Matemáticas</a></li>
+								<li><a href="http://www.uchile.cl/">Universidad de Chile</a></li>
 							</ul>
-						</div>
-
-					</div>
-
-					<div class="box">
-
-						<div class="box_title">Gallery</div>
-
-						<div class="box_content">
-
-							<div class="thumbnails">
-								
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-								<a href="#" class="thumb"><img src="sample-thumbnail.jpg" width="64" height="64" alt="" /></a>
-
-								<div class="clearer">&nbsp;</div>
-
-							</div>
-
 						</div>
 
 					</div>
@@ -193,54 +122,7 @@
 
 		<div id="dashboard">
 			<div id="dashboard_inner">
-
-				<div class="col3 left">
-					<div class="col3_content">
-
-						<div class="col_title">Tincidunt</div>
-						<ul>
-							<li><a href="#">Consequat molestie</a></li>
-							<li><a href="#">Sem justo</a></li>
-							<li><a href="#">Semper eros</a></li>
-							<li><a href="#">Magna sed purus</a></li>
-							<li><a href="#">Tincidunt morbi</a></li>
-						</ul>
-
-					</div>
-				</div>
-
-				<div class="col3mid left">
-					<div class="col3_content">
-
-						<div class="col_title">Fermentum</div>
-						<ul>
-							<li><a href="#">Semper fermentum</a></li>
-							<li><a href="#">Sem justo</a></li>
-							<li><a href="#">Magna sed purus</a></li>
-							<li><a href="#">Tincidunt nisl</a></li>
-							<li><a href="#">Consequat molestie</a></li>
-						</ul>
-
-					</div>
-				</div>
-
-				<div class="col3 right">
-					<div class="col3_content">
-
-						<div class="col_title">Praesent</div>
-						<ul>
-							<li><a href="#">Semper lobortis</a></li>
-							<li><a href="#">Consequat molestie</a></li>
-							<li><a href="#">Magna sed purus</a></li>
-							<li><a href="#">Sem morbi</a></li>
-							<li><a href="#">Tincidunt sed</a></li>
-						</ul>
-
-					</div>
-				</div>
-
 				<div class="clearer">&nbsp;</div>
-
 			</div>
 		</div>
 

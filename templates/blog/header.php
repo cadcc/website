@@ -6,7 +6,7 @@
 
 <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
-<link rel="stylesheet" href="http://www.cadcc.cl/cadcc.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://cadcc.cl/cadcc.css" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -23,7 +23,7 @@
 	<div id="layout_top">
 		
 		<div id="site_title">
-			<h1><a href="<?php echo get_option('home'); ?>"><img src="http://www.cadcc.cl/images/cadcc.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
+			<h1><a href="<?php echo get_option('home'); ?>"><img src="http://cadcc.cl/images/cadcc.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
 			<h2><?php bloginfo('description'); ?></h2>
 		</div>
 

@@ -555,5 +555,11 @@ div.comment_list {
    margin: 0;
 }
 
+.tweet_date {
+  color: #777;
+	font-size: 0.85em;
+	padding: 8px 0 12px;
+}
+
 /* Single Line IE Fixes */
 * html #nav1, * html #nav2, * html #layout_body, * html #dashboard_inner, * html #footer {height: 0.01%; min-height: 0.01%;}
