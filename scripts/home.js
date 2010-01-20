@@ -1,24 +1,14 @@
 $(document).ready(function() {
   
-  // Ultima noticia del Blog
-  jQuery.getFeed({
-    url: 'http://blog.cadcc.cl/feed/',
-    success: function(feed) {
-      last = feed.items[0];
-      $('#news').html('<div class="post">'+
-      	'<div class="post_title"><h1><a href="'+last.link+'">'+last.title+'</a></h1></div>'+
-      	'<div class="post_date">hace '+DateHelper.timeAgoInWords(new Date(last.updated))+'</div>'+
-      	'<div class="post_body">'+last.description+'</div>'+
-      '</div>');
-    }
-  });
-  
-  // Ultimos twitts
-  jQuery.getJSON('http://twitter.com/statuses/user_timeline/cadcc.json?count=5&callback=?', function (data) {
-    $.each(data, function(i, twitt) {
-      $('#tweets').append('<p class="tweet">'+twitt.text+'<br /><span class="tweet_date">hace <a href="http://twitter.com/cadcc/status/'+twitt.id+'">'+
-      DateHelper.timeAgoInWords(new Date(twitt.created_at))+'</a></span></p>')
-    });
+  $.address.change(function(event) {
+      if (event.value == '/')
+        event.value = 'inicio'
+
+      $('#content').load(event.value + '.html');
+      $('#nav2 .current_page_item').removeClass('current_page_item');
+      $('#nav2 a[href=#'+event.value+']').parent('li').addClass('current_page_item');
+      
+      document.title = $('#nav2 .current_page_item a').html() + ' @ CaDCC';
   });
 });
 

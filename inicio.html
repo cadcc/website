@@ -1,0 +1,49 @@
+<h1>CaDCC</h1>
+	
+	<p>Bienvenido al sitio del Centro de Alumnos del Departamento de Ciencias de la Computación.</p>
+	<p>Aquí podrás encontrar información relevante a lo que estamos haciendo dentro y fuera del departamento tanto alumnos como ex-alumnos.</p>
+	
+	<div class="box">
+		<div class="box_title">Noticias</div>
+		<div class="box_content" id="news">
+		</div>
+		<p>Lee mas en <a href="http://blog.cadcc.cl/" alt="Blog del CaDCC">nuestro blog &#x2192;</a></p>
+	</div>
+	
+	<div class="box" style="width: 330px; float: left;">
+		<div class="box_title">Tweets</div>
+		<div class="box_content" id="tweets">
+		</div>
+		<p>Mas en <a href="http://twitter.com/cadcc" alt="Twitter CaDCC">@cadcc</a></p>
+	</div>
+	
+	<div class="box" style="width: 230px; float: right;">
+		<div class="box_title">Facebook</div>
+		<div class="box_content">
+			<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/es_LA"></script><script type="text/javascript">FB.init("995e9ccd01aab03a2881739961f82c9c");</script><fb:fan profile_id="172871116581" stream="" connections="20" width="230"></fb:fan>
+		</div>
+		<a href="http://www.facebook.com/pages/CaDCC/172871116581">CaDCC en Facebook</a>
+	</div>
+
+<script type="text/javascript" charset="utf-8">
+  // Ultima noticia del Blog
+  jQuery.getFeed({
+    url: 'http://blog.cadcc.cl/feed/',
+    success: function(feed) {
+      last = feed.items[0];
+      $('#news').html('<div class="post">'+
+      	'<div class="post_title"><h1><a href="'+last.link+'">'+last.title+'</a></h1></div>'+
+      	'<div class="post_date">hace '+DateHelper.timeAgoInWords(new Date(last.updated))+'</div>'+
+      	'<div class="post_body">'+last.description+'</div>'+
+      '</div>');
+    }
+  });
+  
+  // Ultimos twitts
+  jQuery.getJSON('http://twitter.com/statuses/user_timeline/cadcc.json?count=5&callback=?', function (data) {
+    $.each(data, function(i, twitt) {
+      $('#tweets').append('<p class="tweet">'+twitt.text+'<br /><span class="tweet_date">hace <a href="http://twitter.com/cadcc/status/'+twitt.id+'">'+
+      DateHelper.timeAgoInWords(new Date(twitt.created_at))+'</a></span></p>')
+    });
+  });
+</script>
