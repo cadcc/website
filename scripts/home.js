@@ -6,7 +6,7 @@ $(document).ready(function() {
 
       $('#content').load(event.value + '.html');
       $('#nav2 .current_page_item').removeClass('current_page_item');
-      $('#nav2 a[href=#'+event.value+']').parent('li').addClass('current_page_item');
+      $('#nav2 a[href=#'+event.value.split('/')[0]+']').parent('li').addClass('current_page_item');
       
       document.title = $('#nav2 .current_page_item a').html() + ' @ CaDCC';
   });
