@@ -43,7 +43,7 @@
   jQuery.getJSON('http://twitter.com/statuses/user_timeline/cadcc.json?count=5&callback=?', function (data) {
     $.each(data, function(i, twitt) {
       $('#tweets').append('<p class="tweet">'+twitt.text+'<br /><span class="tweet_date">hace <a href="http://twitter.com/cadcc/status/'+twitt.id+'">'+
-      DateHelper.timeAgoInWords(new Date(twitt.created_at))+'</a></span></p>')
+      DateHelper.timeAgoInWords(new Date(twitt.created_at))+'</a></span></p>');
     });
   });
 </script>
