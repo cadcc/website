@@ -4,15 +4,15 @@
 	<div class="box_title">Lo que dicen</div>
 	<div class="box_content" id="tweets">
 		<script>
-			jQuery.getJSON('http://api.twitter.com/1/sagmor/lists/dcc/statuses.json', function(statuses){
+			jQuery.getJSON('http://api.twitter.com/1/cadcc/lists/dccianos/statuses.json', function(statuses){
 				$.each(statuses, function(i, twitt) {
-			      $('#tweets').append('<p class="tweet"><img class="left" src="'+twitt.user.profile_image_url+'" />'+twitt.text+'<br /><span class="tweet_date">hace <a href="http://twitter.com/cadcc/status/'+twitt.id+'">'+
+			      $('#tweets').append('<p class="tweet"><img class="left" src="'+twitt.user.profile_image_url+'" />'+twitt.text+'<br /><span class="tweet_date">hace <a href="http://twitter.com/'+twitt.user.screen_name+'/status/'+twitt.id+'">'+
 			      DateHelper.timeAgoInWords(new Date(twitt.created_at))+'</a></span></p><br class="clear">');
 			    });
 			});
 		</script>
 	</div>
 	
-	<p>Mas en <a href="http://twitter.com/sagmor/dcc" alt="Twitteros del DCC">@sagmor/dcc</a></p>
+	<p>Mas en <a href="http://twitter.com/cadcc/dccianos" alt="Twitteros del DCC">@cadcc/dccianos</a></p>
 </div>
 
