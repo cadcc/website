@@ -3,7 +3,7 @@
 <div class="box">
 	<div class="box_title">Lo que dicen</div>
 	<div class="box_content" id="tweets">
-		<script>
+	  <script type="text/javascript" charset="utf-8">
 			jQuery.getJSON('http://api.twitter.com/1/cadcc/lists/dccianos/statuses.json', function(statuses){
 				$.each(statuses, function(i, twitt) {
 			      $('#tweets').append('<p class="tweet"><img class="left" src="'+twitt.user.profile_image_url+'" />'+twitt.text+'<br /><span class="tweet_date">hace <a href="http://twitter.com/'+twitt.user.screen_name+'/status/'+twitt.id+'">'+
